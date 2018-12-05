@@ -18,6 +18,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import PhotoAlbum from '@material-ui/icons/PhotoAlbum';
+import Albums from './albums';
 
 const drawerWidth = 240;
 
@@ -135,6 +137,12 @@ class MiniDrawer extends React.Component {
           </div>
           <Divider />
           <List>
+            <ListItem button key="Album">
+              <ListItemIcon>
+                <PhotoAlbum />
+              </ListItemIcon>
+              <ListItemText primary="Album" />
+            </ListItem>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
@@ -154,6 +162,7 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
+          <Albums/>
           <Typography paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent

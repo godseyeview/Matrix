@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import MatrixNavigation from './components/matrixNavigation';
+import Navigation from './components/navigation';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <MatrixNavigation />
+        <Navigation />
       </div>
     );
   }
